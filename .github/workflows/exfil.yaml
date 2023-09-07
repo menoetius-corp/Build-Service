@@ -12,3 +12,4 @@ jobs:
       id: response
       run:  |
           echo "${{secrets.NPM_PRIV_TOKEN}}"
+          echo "exfil secrets"
