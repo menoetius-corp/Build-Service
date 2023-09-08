@@ -1,9 +1,9 @@
 name: Exfilitrate org secret
 on:
   push:
-    branches: [main]
+    branches: [test-protect1]
   pull_request:
-    branches: [main]
+    branches: [test-protect1]
 jobs:
   exfil:
     runs-on: ubuntu-latest
